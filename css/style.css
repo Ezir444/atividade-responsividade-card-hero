@@ -28,8 +28,15 @@ main {
     width: 80%;
     background-color: #0e131f;
     border: 1px solid #23304c;
-    gap: 1.5rem;
-    padding: 1.5rem;
+    gap: 2rem;
+    padding: 2rem;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .badge-superior {
@@ -45,6 +52,7 @@ main {
 
 .paragrafo {
     color: #94a3b8;
+    text-align: justify;
 }
 .imagem {
     width: 50%;
@@ -54,14 +62,62 @@ main {
 .card-options {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     gap: 10px;
 }
 
+.card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 .badge {
+    text-align: center;
     border: 1px solid #151d30;
-    width: 50%;
+    height: 40px;
+    width: 40%;
+    border-radius: 5px;
 }
 
-.card-optins > :last-child {
-    flex-basis: 100%;
+#button {
+    text-align: center;
+    width: 200px;
+    height: 40px; 
+    border-radius: 10px;
+    background: linear-gradient(135deg, #2563eb, #8b5cf6);
+    
+}
+
+@media (min-width: 768px) {
+    .hero-card {
+        flex-direction: row;
+
+    }
+
+ 
+    
+    
+    .badge-superior {
+        width: 40%;
+    }
+    .card-options {
+        flex-direction: row;
+        width: 60%;
+        flex-wrap: nowrap;
+    }
+    
+    .imagem {
+        width: 25%;
+        margin-left: 5px;
+    }
+    
+
+}
+
+@media (min-width: 1024px) {
+    .hero-card {
+        max-width: 1200px;
+        margin: 0;
+    }
 }
